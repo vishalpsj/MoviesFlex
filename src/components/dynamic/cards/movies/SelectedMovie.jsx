@@ -46,17 +46,17 @@ export const SelectedMovie = () => {
 
                     <p className="text-2xl"><b className="text-3xl font-extrabold">Overview: </b>{loaderdata.overview}</p>
 
-                    <div className="basedata grid grid-cols-2 gap-4 justify-center w-fit text-2xl py-4 items-center">
+                    <div className="basedata">
                         
-                        <p className="flex gap-2 items-center"><span className="text-green-500 bg-white rounded-full" ><FaCirclePlay /></span><b> Runtime: </b>
+                        <p className="basedataContent"><span className="text-green-500 bg-white rounded-full" ><FaCirclePlay /></span><b> Runtime: </b>
                             {Math.floor(loaderdata.runtime / 60)}h {loaderdata.runtime % 60}m
                         </p>
 
-                        <p className="flex gap-2 items-center"><span className="text-orange-300 text-3xl"><CiCalendarDate /></span><b>Release date:</b> {loaderdata.release_date}</p>
+                        <p className="basedataContent"><span className="text-orange-300 text-3xl"><CiCalendarDate /></span><b>Release date:</b> {loaderdata.release_date}</p>
 
-                        <p className="flex gap-2 items-center"><span className="text-red-500 text-3xl"><HiCurrencyDollar /></span><b>Budget: </b>{formatBudget(loaderdata.budget)}</p>
+                        <p className="basedataContent"><span className="text-red-500 text-3xl"><HiCurrencyDollar /></span><b>Budget: </b>{formatBudget(loaderdata.budget)}</p>
 
-                        <p className="flex gap-2 items-center"><span className="text-amber-500 text-3xl"><HiCurrencyDollar /></span><b>Revenue: </b>{formatBudget(loaderdata.revenue)}</p>
+                        <p className="basedataContent"><span className="text-amber-500 text-3xl"><HiCurrencyDollar /></span><b>Revenue: </b>{formatBudget(loaderdata.revenue)}</p>
                     </div>
 
                     <p className="flex gap-2 items-center text-2xl"><span className="text-4xl text-blue-500"><FaLanguage /></span><b>Available Languages: </b>{loaderdata.spoken_languages.map((langs) => langs.english_name).join(", ")}</p>

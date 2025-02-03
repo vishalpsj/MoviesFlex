@@ -15,6 +15,7 @@ import { SelectedMovie } from "./components/dynamic/cards/movies/SelectedMovie"
 import { SelectedTvShow } from "./components/dynamic/cards/tvshow/SelectedTvShow"
 import { SelectedKidsShow } from "./components/dynamic/cards/kids/SelectedKidsShow"
 import { cardsForHome } from "./components/api/forhome/GetApiDataforHome"
+import './App.css'
 
 
 export const App = () => {

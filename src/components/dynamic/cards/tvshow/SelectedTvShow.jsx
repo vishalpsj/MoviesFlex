@@ -15,13 +15,13 @@ export const SelectedTvShow = () => {
     const baseURL = "https://image.tmdb.org/t/p/w500";
 
     return (
-        <div className="flex flex-col">
+        <div className="">
             <div className="selectedPage">
                 <div className="poster">
                     <img src={`${baseURL}${loaderdata.backdrop_path}`} alt="Poster Not Available" className="text-2xl"/>
                 </div>
 
-                <div className="data flex flex-col gap-6 dramaData">
+                <div className="data flex flex-col gap-6">
                     <h1 className="text-7xl font-bold">{loaderdata.name}</h1>
 
                     <h2 className="text-2xl">{loaderdata.tagline}</h2>
@@ -74,7 +74,7 @@ export const SelectedTvShow = () => {
                         return (
                             <li key={season.id} className="dramaCard">
                                 <h1 className="text-4xl font-extrabold text-center py-4">{season.name}</h1>
-                                <img src={`${baseURL}${season.poster_path}`}/>
+                                <img src={`${baseURL}${season.poster_path}`} alt=""/>
 
                                 <div className="p-4 flex flex-col gap-4">
                                     <h1 className="text-2xl flex items-center gap-4"><span className="text-3xl text-green-500"><GiDramaMasks /></span><b className="text-3xl">Total episodes: </b>{season.episode_count}</h1>
