@@ -1,0 +1,288 @@
+@import "tailwindcss";
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    height: max-content;
+    background-color: black;
+    color: #fff;
+    overflow-x: hidden;
+    font-family: "Urbanist", serif;
+}
+
+/* CSS for header section starts */
+
+nav {
+    position: fixed;
+    background-color: #000;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+
+nav h1 {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+nav ul li a {
+    color: #ffffffb6;
+    transition: all .3s ease;
+    padding-bottom: 4px;
+    font-size: 2rem;
+}
+
+nav ul li a:hover {
+    color: #ffffffe7;
+}
+
+
+nav ul li {
+    position: relative;
+    padding-bottom: 1px;
+}
+
+nav ul li::before {
+    position: absolute;
+    bottom: 0%;
+    content: '';
+    height: 4px;
+    width: 0%;
+    background-color: #fff;
+    transition: all .3s ease;
+}
+
+nav ul li:hover::before {
+    width: 100%;
+}
+
+.active {
+    color: #fff;
+    transition: all .3s ease;
+    transition: all .3s ease;
+    padding-bottom: 4px;
+    position: relative;
+}
+
+.active::before {
+    position: absolute;
+    bottom: 0%;
+    content: '';
+    height: 4px;
+    width: 100%;
+    background-color: red;
+    animation: fill .5s ease forwards;
+}
+
+@keyframes fill {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* CSS for header section ends */
+
+
+
+
+/* CSS for Main Page starts */
+
+.movieContainer {
+    color: #ffffffb3;
+    padding-top: 10rem;
+
+    h1 {
+        padding: 0 3rem;
+        font-size: 2rem;
+        background-color: #333;
+        width: fit-content;
+        margin-left: 3rem;
+        padding-right: 10rem;
+        border-right: 10px solid red;
+        border-radius: 5px;
+    }
+}
+
+
+.moviesPage {
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    margin: auto;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 3rem;
+}
+
+.movieCardsPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #111;
+    border-radius: 10px;
+}
+
+.movieCardsPage a {
+    height: 90%;
+}
+
+.movieCardsPage img {
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .15s;
+}
+
+.movieCardsPage img:hover {
+    transition: all .45s ease .7s;
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+
+.contentDetails {
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    & h1 {
+        font-size: 4rem;
+        color: #fff;
+    }
+}
+
+/* CSS for Movies Page ends */
+
+/* CSS for movies selected starts  */
+
+
+.selectedPage {
+    width: 100%;
+    padding: 12rem 2rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.poster {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poster img {
+    border-radius: 10px;
+}
+
+.data{
+    /* background-color: red; */
+    width: 50%;
+}
+
+
+
+
+.goBackBtn{
+    font-size: 2rem;
+    background-image: linear-gradient(45deg, rgb(202, 1, 1), rgba(240, 4, 4, 0.397));
+    color: #bbb;
+    font-weight: 900;
+    width: fit-content;
+    padding: .8rem 1.5rem;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .5s ease;
+    border: 1px solid #bbb;
+}
+
+.goBackBtn::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #111;
+    left: 0%;
+    bottom: 0%;
+    z-index: 1;
+    transition: width 0.3s ease; /* Add transition for smooth animation */
+}
+
+.goBackBtn span{
+    position: relative;
+    z-index: 2; /* Keep the text above the ::before pseudo-element */
+}
+
+.goBackBtn:hover::before{
+    width: 100%;
+}
+
+.goBackBtn:hover{
+    color: #bbb;
+    box-shadow: -10px 0px 1000px 10px skyblue, 100px 0px 100px 10px rgb(202, 1, 1);
+    border-radius: 30px;
+    border: 1px solid rgb(202, 1, 1);
+}
+
+.dramaData {
+    width: 60%;
+}
+
+.dramaPage {
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    place-items: center;
+    gap: 2rem;
+    margin: auto;
+    padding: 3rem 1rem;
+    align-items: start;
+}
+
+.dramaCard {
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
+    border-radius: 10px;
+    max-width: 300px;
+    gap: 1rem;
+}
+
+.slideHero{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    cursor: pointer;
+}
+
+
+.slideShow{
+    width: 50%;
+}
+
+.slideShow img{
+    border-radius: 10px;
+}
+/* CSS for movies selected end */
