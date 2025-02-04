@@ -131,14 +131,13 @@ nav .menu span {
 
 .movieContainer {
     color: #ffffffb3;
-    /* padding-top: 10rem; */
 
     h1 {
         padding: 0 1rem;
         font-size: 2rem;
         background-color: #333;
         width: fit-content;
-        margin-left: 3rem;
+        margin-left: 1rem;
         padding-right: 3rem;
         border-right: 10px solid red;
         border-radius: 5px;
@@ -154,7 +153,7 @@ nav .menu span {
     margin: auto;
     justify-content: center;
     gap: 2rem;
-    padding: 2rem 3rem;
+    padding: 2rem 1rem;
 }
 
 .movieCardsPage {
@@ -230,7 +229,7 @@ nav .menu span {
 
 .basedata {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     place-items: centre;
     max-width: 600px;
@@ -378,6 +377,9 @@ nav .menu span {
 @media screen and (min-width: 600px) {
     .menuItems li a {
         font-size: 1.6rem;
+    }
+    .basedata{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
