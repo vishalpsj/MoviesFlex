@@ -16,9 +16,9 @@ export const Header = () => {
             <div className="menu" onClick={() => {
                 setismenuOpen(!ismenuOpen)
             }}>
-                <span></span>
-                <span></span>
-                <span></span>
+                <span className={`${ismenuOpen ? "toDown" : ""}`}></span>
+                <span className={`${ismenuOpen ? "totransparent": ""}`}></span>
+                <span className={`${ismenuOpen ? "toUp" : ""}`}></span>
             </div>
             <ul className={`menuItems ${ismenuOpen? "open": ""}`}>
                 <li><NavLink to="/">Home</NavLink></li>
