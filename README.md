@@ -60,8 +60,22 @@ To run the project locally, follow these steps:
 
 ## Direct URL
 
-- **https://moviesflex-vsp.netlify.app/**  
+- **https://moviesflex-vsp.netlify.app/**
 
+## Screenshots
+
+- **Home Page View**
+  
+  ![MovieFlex screenshot](https://drive.google.com/uc?export=view&id=1Dg37XEccVVgSP5knarLTmJ6R4cgbLX-x)
+
+- **Selected Movie Page View**
+  
+  ![MoviesFlex screenshot](https://drive.google.com/uc?export=view&id=1WXkzU4MP2A91Ddg21jZOiCMcFNZqTCzb)
+
+
+- **Selected TV Show Page View**
+  
+  ![MoviesFlex screenshot](https://drive.google.com/uc?export=view&id=1u71LWazid9eSajQUXVYxBuWuoC4NZhgG)
 
 ## Contributing
 
