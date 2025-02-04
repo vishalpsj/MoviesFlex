@@ -47,7 +47,7 @@ nav h1 {
 nav .menu {
     display: none;
     position: absolute;
-    top: 33px;
+    top: 30px;
     right: 30px;
     flex-direction: column;
     justify-content: space-between;
