@@ -1,16 +1,27 @@
 @import "tailwindcss";
 
+*{
+    box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
+    height: 100%;
+    box-sizing: border-box;
+
 }
 
 
 body {
-    /* height: max-content; */
     background-color: black;
     color: #fff;
+    position: relative;
     overflow-x: hidden;
     font-family: "Urbanist", serif;
+    margin: 0;
+    min-height: 100%;
+    padding-bottom: 5rem;
+    box-sizing: inherit;
 }
 
 /* CSS for header section starts */
@@ -24,7 +35,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 2rem 3rem;
-    position: sticky;
+    position: static;
 }
 
 
@@ -131,6 +142,8 @@ nav .menu span {
 
 .movieContainer {
     color: #ffffffb3;
+    height: 100%;
+
 
     h1 {
         padding: 0 1rem;
@@ -341,6 +354,21 @@ nav .menu span {
 }
 
 /* CSS for movies selected end */
+
+/* CSS for footer starts */
+
+footer{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: #1111119f;
+}
+
+/* CSS for footer ends */
+
 
 
 /* CSS for making responsive starts */
